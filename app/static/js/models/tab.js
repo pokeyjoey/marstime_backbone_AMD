@@ -1,16 +1,20 @@
-// site/js/models/tab.js
+define([
+    'backbone'
+    ],
+    function(Backbone){
 
-var app = app || {};
+        // Tab Model
+        var Tab = Backbone.Model.extend({
+            
+            defaults: {
+                id: '',
+                active: false
+            },
 
-// Tab Model
-app.Tab = Backbone.Model.extend({
-    
-    defaults: {
-        id: '',
-        active: false
-    },
+            initialize: function() {
+                console.log('Tab.initialize');
+            }
+        });
 
-    initialize: function() {
-        console.log('Tab.initialize');
-    }
+        return Tab;
 });

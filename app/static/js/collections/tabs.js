@@ -1,18 +1,21 @@
-// site/js/collections/tabs.js
+define([
+    'backbone',
+    'models/tab'
+    ],
+    function(Backbone, Tab){
 
-var app = app || {};
+        // Tab Collection
+        var TabList = Backbone.Collection.extend({
+            
+            // reference to this collections model.
+            model: Tab,
 
-// Tab Collection
-var TabList = Backbone.Collection.extend({
-    
-    // reference to this collections model.
-    model: app.Tab,
+            initialize: function() {
+                console.log('TabList.initialize');
+            }
 
-    initialize: function() {
-        console.log('TabList.initialize');
+        });
+
+        return TabList;
     }
-
-});
-
-// create our global collection of tabs
-app.Tabs = new TabList();
+);

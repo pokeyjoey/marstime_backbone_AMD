@@ -1,20 +1,22 @@
-// site/js/routers/router.js
+define([
+    'backbone'
+    ],
+    function(Backbone){
 
-var app = app || {};
+        var AppRouter = Backbone.Router.extend({
+            // define the routes and function maps for this router
+            routes: {
+                "calendar":  "calendar",
+                "calculate": "calculate",
+                "history":   "history",
+                "areogator": "areogator"
+            },
 
-var AppRouter = Backbone.Router.extend({
-    // define the routes and function maps for this router
-    routes: {
-        "calendar":  "calendar",
-        "calculate": "calculate",
-        "history":   "history",
-        "areogator": "areogator"
-    },
+            initialize: function() {
+                console.log('AppRouter.initialize');
+            }
+        });
 
-    initialize: function() {
-        console.log('AppRouter.initialize');
+        return AppRouter;
     }
-});
-
-// create an instance of our router.
-app.MarsAppRouter = new AppRouter();
+);

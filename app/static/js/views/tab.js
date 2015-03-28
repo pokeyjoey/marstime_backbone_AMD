@@ -1,23 +1,29 @@
-// site/js/views/tab.js
+define([
+    'jquery',
+    'backbone'
+    ],
+    function($, Backbone){
 
-var app = app || {};
+        // Tab View item
+        var TabView = Backbone.View.extend({
 
-// Tab View item
-app.TabView = Backbone.View.extend({
+            active: false,
 
-    active: false,
+            initialize: function() {
+                console.debug('Tabview.initialize');
+                this.listenTo(pubSub, "tab:selected", this.render, this);
+            },
 
-    initialize: function() {
-        console.debug('Tabview.initialize');
-        this.listenTo(pubSub, "tab:selected", this.render, this);
-    },
+            render: function(tab) {
+                console.debug('Tabview.render');
+                if (tab.id === this.id){
+                    this.$el.addClass('active');
+                } else {
+                    this.$el.removeClass('active');
+                }
+            }
+        });
 
-    render: function(tab) {
-        console.debug('Tabview.render');
-        if (tab.id === this.id){
-            this.$el.addClass('active');
-        } else {
-            this.$el.removeClass('active');
-        }
+        return TabView;
     }
-});
+);
