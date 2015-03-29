@@ -3,7 +3,7 @@ define([
     'backbone',
     'routers/router',
     'collections/tabs',
-    'views/tab'
+    'views/tab',
     'views/article'
     ], 
     function($, Backbone, AppRouter, TabCollection, TabView, ArticleView){
@@ -54,7 +54,7 @@ define([
             // publish a signal for all listeners to display the selected views. 
             publish: function(page) {
                 console.debug('AppView.publish');
-                pubSub.trigger("tab:selected", {id: page});
+                Backbone.trigger("tab:selected", {id: page});
             }
         });
 

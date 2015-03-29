@@ -1,24 +1,26 @@
 require.config({
-    baseUrl:'../',
+    shim : {
+        "bootstrap" : { deps :['jquery'] }
+    },
     paths: {
-        'jquery': 'libs/jquery-1.11.2.min',
-        'underscore': 'libs/underscore-min',
-        'backbone': 'libs/backbone-min'
+        'jquery': 'lib/jquery-1.11.2.min',
+        'underscore': 'lib/underscore-min',
+        'backbone': 'lib/backbone-min',
+        'bootstrap': '../bootstrap/js/bootstrap.min'
     }
 });
 
-require(['backbone', 'underscore', 'views/app'], function(Backbone, _, AppView){
+require(['backbone', 'views/app'],
+    function(Backbone, AppView){
 
-    // our global pubSub object
-    var pubSub = _.extend({},Backbone.Events);
+        // create the App.
+        console.debug('Instantiate the AppView');
+        var App = new AppView();
 
-    // create the App.
-    console.debug('Instantiate the AppView');
-    var App = new app.AppView();
+        console.debug('Publish the calendar view');
+        App.publish('calendar');
 
-    console.debug('Publish the calendar view');
-    App.publish('calendar');
-
-    console.debug('Backbone.history.start');
-    Backbone.history.start();
-});    
+        console.debug('Backbone.history.start');
+        Backbone.history.start();
+    }
+);    

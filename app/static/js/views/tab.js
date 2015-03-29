@@ -11,7 +11,7 @@ define([
 
             initialize: function() {
                 console.debug('Tabview.initialize');
-                this.listenTo(pubSub, "tab:selected", this.render, this);
+                this.listenTo(Backbone, "tab:selected", this.render, this);
             },
 
             render: function(tab) {

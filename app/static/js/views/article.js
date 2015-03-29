@@ -1,7 +1,8 @@
 define([
     'jquery',
     'underscore',
-    'backbone'
+    'backbone',
+    'bootstrap'
     ],
     function($, _, Backbone){
 
@@ -19,7 +20,7 @@ define([
             initialize: function() {
                 console.debug('ArticleView.initialize');
 
-                this.listenTo(pubSub, "tab:selected", this.render, this);
+                this.listenTo(Backbone, "tab:selected", this.render, this);
             },
 
             render: function(template) {
@@ -36,7 +37,7 @@ define([
                 this.$el.html(selectedTemplate);
 
                 // toggle close the bootstrap navbar
-                $('#navbar').collapse('hide')
+                $('#navbar').collapse('hide');
 
                 // scroll to the top of the window.
                 $(window).scrollTop(0);
