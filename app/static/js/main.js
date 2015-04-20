@@ -3,10 +3,14 @@ require.config({
         "bootstrap" : { deps :['jquery'] }
     },
     paths: {
-        'jquery': 'lib/jquery-1.11.2.min',
-        'underscore': 'lib/underscore-min',
-        'backbone': 'lib/backbone-min',
-        'bootstrap': '../bootstrap/js/bootstrap.min'
+        'jquery': ['//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min',
+            'lib/jquery-1.11.2.min'],
+        'underscore': ['//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min',
+            'lib/underscore-min'],
+        'backbone': ['//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min',
+            'lib/backbone-min'],
+        'bootstrap': ['//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min',
+            '../bootstrap/js/bootstrap.min']
     }
 });
 
