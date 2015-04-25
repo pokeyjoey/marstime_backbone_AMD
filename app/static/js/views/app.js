@@ -31,6 +31,12 @@ define([
                 this.listenTo(this.tabs, 'add', this.addTabView, this);
 
                 // initialize all tabs
+                var tabsData = [
+                {el: "#calendar",  id: "calendar",  active: true},
+                {el: "#calculate", id: "calculate", active: false},
+                {el: "#history",   id: "history",   active: false},
+                {el: "#areogator", id: "areogator", active: false}
+                ];
                 this.tabs.add(tabsData);
 
                 // initialize the Article view
