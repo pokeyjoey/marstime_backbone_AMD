@@ -10,12 +10,13 @@
     <title>A Calendar for Mars</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="/static/css/theme.css" rel="stylesheet">
+    <link href="/static/css/sticky-footer-navbar.css" rel="stylesheet">
 
   </head>
 
@@ -65,7 +66,14 @@
         </div>
         <!-- Backbone.js Article Views are displayed here -->
 
+        <footer class="footer">
+          <div class="container">
+            <p class="text-muted text-center">Site created by <a href="mailto:jkeauctions@gmail.com?Subject=A%20Calendar%20for%20Mars" target="_top">Jeff Roche</a> - reproduced with the permission of the author.</p>
+          </div>
+        </footer>
+
     </div> <!-- end marstime -->
+
 
     <!-- Backbone Templates -->
     <script type="text/template" id="calendar-template">
@@ -87,6 +95,16 @@
 
     <!-- create the backbone app -->
     <script data-main="static/js/main" src="static/js/lib/require.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-62932613-1', 'auto');
+      ga('send', 'pageview');
+    </script>
 
   </body>
 </html>

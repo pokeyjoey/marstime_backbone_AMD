@@ -9,7 +9,7 @@ require.config({
             'lib/underscore-min'],
         'backbone': ['//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min',
             'lib/backbone-min'],
-        'bootstrap': ['//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min',
+        'bootstrap': ['//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min',
             '../bootstrap/js/bootstrap.min']
     }
 });
