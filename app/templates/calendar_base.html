@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link href="static/built/css/main.css" rel="stylesheet">
+    <style>
+        {% include "css/critical.css" %}
+    </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -94,10 +96,10 @@
     <!-- Backbone Templates -->
 
     <!-- create the backbone app -->
-    <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">-->
-    <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet">-->
-    <!--<link href="/static/css/main.css" rel="stylesheet">-->
-    <script data-main="static/built/js/main" src="static/js/lib/require.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet">
+    <script data-main="static/built/js/main" src="static/js/lib/require-min.js"></script>
 
     {% include "google_analytics.html" %}
 
