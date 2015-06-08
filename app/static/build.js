@@ -1,0 +1,25 @@
+({
+    mainConfigFile:"js/main.js",
+    appDir:".",
+    baseUrl:"js",
+    removeCombined:true,
+    findNestedDependencies:true,
+    dir:"built",
+    optimizeCss:"standard",
+    modules:[
+        {
+            name:"main",
+            exclude:[
+                "jquery",
+                "underscore",
+                "backbone","bootstrap"
+            ]
+        }
+    ],
+    paths:{
+        jquery:"empty:",
+        underscore:"empty:",
+        backbone:"empty:",
+        bootstrap:"empty:"
+    }
+});

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+        {% include "css/critical.css" %}
+    </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,23 +11,14 @@
     <meta name="keywords" content="Mars,Zubrin,Calendar,Mars Society,Space,NASA">
     <meta name="author" content="Jeff Roche">
 
-    <link rel="icon" type="image/png" href="http://i920.photobucket.com/albums/ad46/jkeauctions/favicon-32x32_zpsdtmdrxpc.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="http://i920.photobucket.com/albums/ad46/jkeauctions/favicon-16x16_zpsfytvero7.png" sizes="16x16" />
-
     <title>A Calendar for Mars</title>
 
     {% include "facebook_open_graph.html" %}
 
     {% include "twitter_card_tags.html" %}
 
-    <!-- Bootstrap core CSS -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap theme -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="/static/css/theme.css" rel="stylesheet">
-    <link href="/static/css/sticky-footer-navbar.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="http://i920.photobucket.com/albums/ad46/jkeauctions/favicon-32x32_zpsdtmdrxpc.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="http://i920.photobucket.com/albums/ad46/jkeauctions/favicon-16x16_zpsfytvero7.png" sizes="16x16" />
 
   </head>
 
@@ -102,9 +96,14 @@
     <!-- Backbone Templates -->
 
     <!-- create the backbone app -->
-    <script data-main="static/js/main" src="static/js/lib/require.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/static/built/css/main.css" rel="stylesheet">
+    <script data-main="static/built/js/main" src="static/js/lib/require-min.js"></script>
 
     {% include "google_analytics.html" %}
+
+
 
   </body>
 </html>
